@@ -111,8 +111,9 @@ param zones array = []
 
 @description('Optional. The name of logs that will be streamed. "allLogs" includes all possible logs for the resource.')
 @allowed([
-  'allLogs'
-  'GatewayLogs'
+  []
+  ['allLogs']
+  ['GatewayLogs']
 ])
 param diagnosticLogCategoriesToEnable array = [
   'allLogs'
@@ -120,7 +121,8 @@ param diagnosticLogCategoriesToEnable array = [
 
 @description('Optional. The name of metrics that will be streamed.')
 @allowed([
-  'AllMetrics'
+  []
+  ['AllMetrics']
 ])
 param diagnosticMetricsToEnable array = [
   'AllMetrics'
